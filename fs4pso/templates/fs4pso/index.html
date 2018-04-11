@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> fs4pso </title>
+		<title> fs4pso </title> <!-- 탭 !-->
 	</head>
 	<body>
-		<div class="상단 메뉴바">
-			로고 -> 메인화면으로 다시
-			select이용해서 학년별, 이벤트 드롭다운
-			추후에 로그인 버튼
+		<div class="menubar">
+			<div class="logo"> <!-- 로고 -> 메인화면으로 연결 !-->
+					<h1><a href="/"> fs4pso </a></h1>
+			</div>
+			<nav>
+				<a href="/1st grade/">1학년</a> |
+				<a href="/2nd grade/">2학년</a> |
+				<a href="/3rd grade/">3학년</a> |
+				<a href="/event/">준위&행사</a>
+			</nav>
+
+			<!-- 추후에 로그인 버튼 !-->
 		</div>
-			글 import
-			버튼 -> 글 작성화면으로
+		<div class="feedback"> <!-- 피드백 글들을 import해서 보여줌 !--> 
+			{% block content %}
+			{% end block %}
+		</div>
+			<a href="/edit" class="edit_feedback"><span>글쓰기</span></a>
 	</body>
 
 </html>
