@@ -1,27 +1,93 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title> fs4pso </title> <!-- 탭 !-->
-	</head>
-	<body>
-		<div class="menubar">
-			<div class="logo"> <!-- 로고 -> 메인화면으로 연결 !-->
-					<h1><a href="/"> fs4pso </a></h1>
-			</div>
-			<nav>
-				<a href="/1st grade/">1학년</a> |
-				<a href="/2nd grade/">2학년</a> |
-				<a href="/3rd grade/">3학년</a> |
-				<a href="/event/">준위&행사</a>
-			</nav>
+{% load staticfiles %}
 
-			<!-- 추후에 로그인 버튼 !-->
-		</div>
-		<div class="feedback"> <!-- 피드백 글들을 import해서 보여줌 !--> 
-			{% block content %}
-			{% end block %}
-		</div>
-			<a href="/edit" class="edit_feedback"><span>글쓰기</span></a>
-	</body>
+<html lang="ko">
+<head>
+  <title> Fs4pso </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+</head>
+<body>
+<div class="container">
+</div>
 
+<nav class="navbar navbar-expand-sm bg-light navbar-light"> <!-- 내비게이션 바 !-->
+  <a class="navbar-brand" href="#">Fs4Pso</a> <!-- href안에 메인 페이지의 주소를 넣어야 함 !-->
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        1학년
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">국어</a>
+        <a class="dropdown-item" href="#">수학</a>
+        <a class="dropdown-item" href="#">영어</a>
+				<a class="dropdown-item" href="#">사회</a>
+				<a class="dropdown-item" href="#">기타</a>
+      </div>
+    </li>
+		<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        2학년
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">국어</a>
+        <a class="dropdown-item" href="#">수학</a>
+        <a class="dropdown-item" href="#">영어</a>
+				<a class="dropdown-item" href="#">사회</a>
+				<a class="dropdown-item" href="#">기타</a>
+      </div>
+    </li>
+		<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        3학년
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">국어</a>
+        <a class="dropdown-item" href="#">수학</a>
+        <a class="dropdown-item" href="#">영어</a>
+				<a class="dropdown-item" href="#">사회</a>
+				<a class="dropdown-item" href="#">기타</a>
+      </div>
+    </li>
+		<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        축제 & 준비위원회
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">공지</a>
+        <a class="dropdown-item" href="#">홍보</a>
+        <a class="dropdown-item" href="#">이벤트</a>
+      </div>
+    </li>
+  </ul>
+  <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="검색">
+    <button class="btn btn-success" type="submit">검색</button>
+  </form>
+</nav>
+<!-- 추후에 로그인 기능 추가 !-->
+<div class="row">
+  <div class="col-sm-3"></div> <!-- 화면의 왼쪽 공백, 추후에 광고로 채울 수 있음 !-->
+  <div class="col-sm-6"> <!-- 화면의 중앙( 피드백 글들을 import해서 보여줌 ), 추후에 block content로 대체 !-->
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+    <p class="groove"><strong>영어2</strong><br>김태윤 20106<br>2018년 01월 01일 12:00 오후<br><br>영어가 너무 어려워요. 어떻게 할까요.</p>
+  </div>
+  <div class="col-sm-3"></div> <!-- 화면의 오른쪽 공백, 추후에 광고로 채울 수 있음 !-->
+</div>
+
+</body>
 </html>
